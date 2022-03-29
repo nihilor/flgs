@@ -1,6 +1,6 @@
 # flgs - The Feature Flag Manager for Node and Javascript
 
-Enables simple feature flagging by incorporating different ways to toggle features.
+Enables simple feature flagging, feature gating and co. by incorporating different states of toggle features.
 
 ## Why?
 
@@ -26,10 +26,36 @@ The order of priorization is `package > features > cli > global > constructor`.
 
 Regard: A flag is set or unset. Because of this maxime **flgs** converts all values to either `true` or `false` based on an own strategy:
 
-* `true`, `1`, `"1"`, `"on"`, `"yes"`, `"enable"` will be interpreted as `set`
+* `true`, `"true"`, `1`, `"1"`, `"on"`, `"yes"`, `"enable"` will be interpreted as `set`
 * a `function` or an `object` as a value for a flag, even if the are empty, will be interpreted as `set`
-* `null` will be interpreted as `false`
-* all other values and types will be interpreted as `false`
+* `null` will be interpreted as `unset`
+* all other values and types will be interpreted as `unset`
+
+## How?
+
+First, install the package via NPM.
+
+```sh
+$ npm install --save ffm
+```
+
+Second, import the package and instantiate FFM.
+
+```js
+const Flgs = require('flgs')
+let flgs = new Flgs()
+```
+
+Third, use it in a simple `if` clause:
+
+```js
+if (flgs.isSet('bluecolors')) {
+    //  new behaviour
+}
+else {
+    //  old behaviour
+}
+```
 
 An example for `package.json` located in the root of the importing project:
 
@@ -89,33 +115,6 @@ let flgs = new Flgs({
     "bluecolors": true
 })
 ```
-
-## How?
-
-First, install the package via NPM.
-
-```sh
-$ npm install --save ffm
-```
-
-Second, import the package and instantiate FFM.
-
-```js
-const Flgs = require('flgs')
-let flgs = new Flgs()
-```
-
-Third, use it in a simple `if` clause:
-
-```js
-if (flgs.isSet('bluecolors')) {
-    //  new behaviour
-}
-else {
-    //  old behaviour
-}
-```
-
 
 License
 -------

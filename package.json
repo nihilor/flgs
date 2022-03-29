@@ -1,8 +1,8 @@
 {
   "name": "flgs",
   "homepage": "http://github.com/nihilor/flgs",
-  "version": "0.0.3",
-  "description": "Enables simple feature flagging, feature gating and co. by incorporating different ways to toggle features.",
+  "version": "0.0.4",
+  "description": "Enables simple feature flagging, feature gating and co. by incorporating different states of toggle features.",
   "main": "flgs.js",
   "scripts": {
     "test": "node test.js"
