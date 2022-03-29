@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const FFM = require('./flgs.js')
-let ffm =   new FFM()
+const Flgs = require('./flgs.js')
+let flgs =   new Flgs()
 
-if (ffm.isSet('blue')) {
+if (flgs.isSet('blue')) {
     //  new behaviour
     console.log("I'm blue, dabadi, dabada!")
 }

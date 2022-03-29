@@ -1,4 +1,4 @@
-# flgs - Feature Flag Manager
+# flgs - The Feature Flag Manager for Node and Javascript
 
 Enables simple feature flagging by incorporating different ways to toggle features.
 
@@ -14,7 +14,7 @@ Enables simple feature flagging by incorporating different ways to toggle featur
 
 ## What?
 
-FFM ist a simple feature flagging manager. It looks up different places for specific configurations and imports them. Possible options are:
+**flgs** is a simple feature flagging manager. It looks up different places for specific configurations and imports them. Possible options are:
 
 * package.json
 * features.json
@@ -24,7 +24,7 @@ FFM ist a simple feature flagging manager. It looks up different places for spec
 
 The order of priorization is `package > features > cli > global > constructor`.
 
-Regard: A flag is set or unset. Because of this maxime FFM converts all values to either `true` or `false` based on an own strategy:
+Regard: A flag is set or unset. Because of this maxime **flgs** converts all values to either `true` or `false` based on an own strategy:
 
 * `true`, `1`, `"1"`, `"on"`, `"yes"`, `"enable"` will be interpreted as `set`
 * a `function` or an `object` as a value for a flag, even if the are empty, will be interpreted as `set`
@@ -85,7 +85,7 @@ const _FMM = {
 An example for a default configuration:
 
 ```js
-let ffm = new FFM({
+let flgs = new Flgs({
     "bluecolors": true
 })
 ```
@@ -101,14 +101,14 @@ $ npm install --save ffm
 Second, import the package and instantiate FFM.
 
 ```js
-const FFM = require('ffm')
-let ffm =   new FFM()
+const Flgs = require('flgs')
+let flgs = new Flgs()
 ```
 
 Third, use it in a simple `if` clause:
 
 ```js
-if (ffm.isSet('bluecolors')) {
+if (flgs.isSet('bluecolors')) {
     //  new behaviour
 }
 else {

@@ -28,7 +28,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 const Fs = require('fs')
 
-class FFM {
+class Flgs {
     //  priorize from out to in
     order = [
         //  package.json
@@ -149,4 +149,4 @@ class FFM {
     }
 }
 
-module.exports = FFM
+module.exports = Flgs
