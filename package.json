@@ -1,13 +1,13 @@
 {
   "name": "flgs",
   "homepage": "http://github.com/nihilor/flgs",
-  "version": "0.0.4",
-  "description": "Enables simple feature flagging, feature gating and co. by incorporating different states of toggle features.",
+  "version": "0.0.5",
+  "description": "Enables simple feature flagging, feature gating and co. by incorporating different stages to toggle features.",
   "main": "flgs.js",
   "scripts": {
     "test": "node test.js"
   },
-  "keywords": ["features", "flagging", "gating", "testing", "gitops"],
+  "keywords": ["features", "flagging", "gating", "testing", "gitops", "pure", "dependencyfree"],
   "author": {
     "name": "Mark Lubkowitz",
     "email": "me@mlu.io",

@@ -1,6 +1,6 @@
 # flgs - The Feature Flag Manager for Node and Javascript
 
-Enables simple feature flagging, feature gating and co. by incorporating different states of toggle features.
+Enables simple feature flagging, feature gating and co. by incorporating different stages to toggle features.
 
 ## Why?
 
