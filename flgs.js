@@ -2,7 +2,7 @@
 
 /*
 
-Feature Flagging
+flgs - Feature Flag Manager
 Copyright (c) 2022 Mark Lubkowitz <me@mlu.io>
 
 Permission is hereby granted, free of charge, to any person obtaining

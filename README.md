@@ -1,4 +1,4 @@
-# Feature Flag Manager
+# flgs - Feature Flag Manager
 
 Enables simple feature flagging by incorporating different ways to toggle features.
 

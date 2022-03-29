@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const FFM = require('./feature-flagging.js')
+const FFM = require('./flgs.js')
 let ffm =   new FFM()
 
 if (ffm.isSet('blue')) {
