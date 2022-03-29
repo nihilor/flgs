@@ -16,13 +16,13 @@ Enables simple feature flagging, feature gating and co. by incorporating differe
 
 **flgs** is a simple feature flagging manager. It looks up different places for specific configurations and imports them. Possible options are:
 
-* package.json
-* features.json
+* `package.json`
+* `flgs.json`
 * command line parameters
 * global array
-* class contructor
+* class constructor
 
-The order of priorization is `package > features > cli > global > constructor`.
+The order of priorization is `package > file > cli > global > constructor`.
 
 Regard: A flag is set or unset. Because of this maxime **flgs** converts all values to either `true` or `false` based on an own strategy:
 
@@ -61,7 +61,6 @@ An example for `package.json` located in the root of the importing project:
 
 ```json
 {
-  ...
   "featureflags": {
     "bluecolors": true,
     "redcolors": false,
@@ -72,11 +71,10 @@ An example for `package.json` located in the root of the importing project:
       "b"
     ]
   }
-  ...
 }
 ```
 
-An example for `featureflags.json` located in the root of the importing project:
+An example for `flgs.json` located in the root of the importing project:
 
 ```json
 {
@@ -88,15 +86,13 @@ An example for `featureflags.json` located in the root of the importing project:
 }
 ```
 
-An example for the command line interface, provided via `package.json` in the root of the importing project. The cli argument must start with `FFM_`:
+An example for the command line interface, provided via `scripts` of `package.json` in the root of the importing project. The cli argument must start with `FFM_`:
 
 ```json
 {
-  ...
   "scripts": {
     "flagging": "node index.js FFM_BLUECOLORS"
   }
-  ...
 }
 ```
 

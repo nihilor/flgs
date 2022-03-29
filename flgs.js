@@ -101,7 +101,7 @@ class Flgs {
 
     //  import file configuration
     importFile () {
-        let featureflagsfilename = './featureflags.json'
+        let featureflagsfilename = './flgs.json'
         return (Fs.existsSync(featureflagsfilename)
             ? this.sanitize(require(featureflagsfilename))
             : {})
