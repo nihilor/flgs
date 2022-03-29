@@ -134,6 +134,9 @@ class Flgs {
             : false
     }
 
+    isset (flag) { return this.isSet(flag) }
+    on (flag) { return this.isSet(flag) }
+
     constructor (cfg) {
         this.config.package =   this.importPackage()
         this.config.file =      this.importFile()
