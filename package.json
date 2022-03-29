@@ -1,6 +1,7 @@
 {
   "name": "flgs",
-  "version": "0.0.1",
+  "homepage": "http://github.com/nihilor/flgs",
+  "version": "0.0.2",
   "description": "Enables simple feature flagging, feature gating and co. by incorporating different ways to toggle features.",
   "main": "flgs.js",
   "scripts": {
@@ -12,5 +13,12 @@
     "email": "me@mlu.io",
     "url": "https://mlu.io"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url":  "git://github.com/nihilor/flgs.git"
+  },
+  "bugs": {
+      "url":  "http://github.com/nihilor/flgs/issues"
+  }  
 }
