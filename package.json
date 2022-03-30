@@ -1,7 +1,7 @@
 {
   "name": "flgs",
   "homepage": "http://github.com/nihilor/flgs",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Enables simple feature flagging, feature gating and co. by incorporating different stages to toggle features.",
   "main": "flgs.js",
   "scripts": {
@@ -20,5 +20,5 @@
   },
   "bugs": {
       "url":  "http://github.com/nihilor/flgs/issues"
-  }  
+  }
 }

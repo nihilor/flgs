@@ -29,13 +29,13 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 const Fs = require('fs')
 
 class Flgs {
-    //  priorize from out to in
+    //  prioritize outer over inner
     order = [
         //  package.json
         'package',
-        //  features.json
+        //  flgs.json
         'file',
-        //  command line and environment parameters
+        //  command line (and later on environment) parameters
         'cli',
         //  global configuration object in project
         'global',
@@ -84,7 +84,8 @@ class Flgs {
         let keys =  Object.keys(cfg)
         let validated = {}
         for (let key of keys) {
-            if (key.match(/^[a-zA-Z0-9\_\-\.]+$/)) {
+            if (key.match(/^(\w+)$/)) {
+                console.log(key.match(/^(\w+)$/))
                 validated[key] = this.booleanize(cfg[key])
             }
         }
@@ -134,8 +135,10 @@ class Flgs {
             : false
     }
 
+    has (flag) { return this.isSet(flag) }
     isset (flag) { return this.isSet(flag) }
     on (flag) { return this.isSet(flag) }
+    use (flag) { return this.isSet(flag) }
 
     constructor (cfg) {
         this.config.package =   this.importPackage()
