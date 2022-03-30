@@ -112,7 +112,7 @@ class Flgs {
         let clicfg = process.argv.slice(2)
         let matched = {}
         for (let arg of clicfg) {
-            let match = arg.match(/^FFM_([a-zA-Z0-9\_\-]+)[\=]?([a-zA-Z0-9\_\-]+)*$/)
+            let match = arg.match(/^(FFM_(\w+)|FFM_(\w+)\=|FFM_(\w+)\=(\w+))$/)
             if (match)
                 matched[match[1].toLowerCase()] = this.booleanize(match[2])
         }
